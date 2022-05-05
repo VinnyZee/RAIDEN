@@ -15,19 +15,19 @@ void setup() {
 }
 
 void loop() {
-  //leds[0] = CRGB::Red;
-  //leds[1] = CRGB::Green;
-//  leds[2] = CRGB::Blue;
-//  leds[3] = CRGB::Red;
-//  leds[4] = CRGB::Green;
-//  leds[5] = CRGB::Blue;
-//  leds[6] = CRGB::Red;
-//  leds[7] = CRGB::Green;
-//  leds[8] = CRGB::Blue;
-//  leds[9] = CRGB::Red;
-//  leds[10] = CRGB::Green;
-//  leds[11] = CRGB::Blue;
-//  leds[12] = CRGB::Red;
-  FastLED.clear();
+  leds[0] = CRGB::Red;
+  leds[1] = CRGB::Green;
+  leds[2] = CRGB::Blue;
+  leds[3] = CRGB::Red;
+  leds[4] = CRGB::Green;
+  leds[5] = CRGB::Blue;
+  leds[6] = CRGB::Red;
+  leds[7] = CRGB::Green;
+  leds[8] = CRGB::Blue;
+  leds[9] = CRGB::Red;
+  leds[10] = CRGB::Green;
+  leds[11] = CRGB::Blue;
+  leds[12] = CRGB::Red;
+  FastLED.show();
   delay(50);
 }
