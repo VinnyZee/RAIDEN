@@ -10,7 +10,7 @@
 #define LEDpin3 15
 
 #define SAMPLES 64             //Must be a power of 2
-#define SAMPLING_FREQUENCY 1000 //Hz, must be less than 10000 due to ADC
+#define SAMPLING_FREQUENCY 10000 //Hz, must be less than 10000 due to ADC
 
 #define Rrange 10 // SAMPLES/3 (more or less) we'll devide de frequency array into 3 ranges
 #define Grange 11
@@ -124,21 +124,18 @@ void loop() {
   Gvalue = 255 * convBrightness(Gmodule);
   Bvalue = 255 * convBrightness(Bmodule);
 
-  Serial.println(Rvalue);
-  Serial.println(Gvalue);
-  Serial.println(Bvalue);
+  // Serial.println(Rvalue);
+  // Serial.println(Gvalue);
+  // Serial.println(Bvalue);
 
-//  analogWrite(REDPIN, Rvalue);
-//  analogWrite(GREENPIN, Gvalue);
-//  analogWrite(BLUEPIN, Bvalue);
+  // for(int i = 0; i < NUM_LEDS; i++) {
+  //   leds[i].r = Rvalue;
+  //   leds[i].g = Gvalue;
+  //   leds[i].b = Bvalue;
+  // }
 
-  for(int i = 0; i < NUM_LEDS; i++) {
-    leds[i].r = Rvalue;
-    leds[i].g = Gvalue;
-    leds[i].b = Bvalue;
-    // leds[i] = CRGB::Black;
-    // delay(100);
-  }
+  fill_solid(leds, NUM_LEDS, CRGB(Rvalue, Gvalue, Bvalue));
+
   FastLED.show();
 
   delay(25);

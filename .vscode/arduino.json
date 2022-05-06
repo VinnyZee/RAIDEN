@@ -1,6 +1,6 @@
 {
     "configuration": "PSRAM=disabled,PartitionScheme=default,CPUFreq=80,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none",
     "board": "esp32:esp32:esp32",
-    "sketch": "audio_sampling\\audio_sampling.ino",
+    "sketch": "audio_sampling_3\\audio_sampling_3.ino",
     "output": "../ArduinoOutput"
 }
